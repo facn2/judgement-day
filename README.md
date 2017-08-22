@@ -9,15 +9,15 @@ git clone
 ```
 Install all the Node dependencies
 ```javascript
-
+npm install
 ```
 Run start
 ```javascript
-
+npm run devStart
 ```
 ---
 ##Our Product:
-We want to build a web application so the students of FACN2 can rate the mentors on categories.
+We want to build a web application so the students of FACN2 can-
 ### Users Stories:
 * Rate Mentors on Categories: eg. Hair
 * See percentage of how much the mentor got rating for one Category.
@@ -48,13 +48,13 @@ We want to build a web application so the students of FACN2 can rate the mentors
 |1|2|14|4|0|
 |2|1|10|0|5
 ---
-## Wirframe:
+## Wireframe:
 ![](https://user-images.githubusercontent.com/26799467/29571643-68418e36-8762-11e7-98dd-aa36da535bac.png)
 
 ---
 
 ## Code guidelines:
-* CamelCase for variable names
+* CamelCase for variable names and snake_case for CSS classes
 * Comments for code clarification
 * Sole use of arrow-functions on backend
 * id's for javascript
