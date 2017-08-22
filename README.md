@@ -23,7 +23,7 @@ We want to build a web application so the students of FACN2 can rate the mentors
 * See percentage of how much the mentor got rating for one Category.
 * See Questions so you can vote based on the category.
 * Click on the Mentors Pictures to choose the one who is better according to the question.
-* There are many fun Categories you can rate mentors.
+* There are many fun Categories you can rate mentors on.
 
 ### Stretch Goals:
 * enabling score table for voting.
