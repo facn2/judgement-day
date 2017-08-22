@@ -16,7 +16,7 @@ CREATE TABLE questions(
 
 CREATE TABLE singing(
   id        SERIAL        PRIMARY KEY,
-  name      VARCHAR(20)   NOT NULL,
+  mentor_id INTEGER       NOT NULL,
   rating    INTEGER       DEFAULT 0 NOT NULL,
   shireen   INTEGER       DEFAULT 0 NOT NULL,
   mario     INTEGER       DEFAULT 0 NOT NULL,
@@ -41,6 +41,6 @@ INSERT INTO questions(category, question) VALUES
 ('singing', 'who is better at singing?');
 
 INSERT INTO singing(name, rating, shireen, mario) VALUES
-('shireen', 1, 0, 1), ('mario', 0, 1, 0);
+(1, 10, 0, 1), (2, 0, 1, 0);
 
 COMMIT;
