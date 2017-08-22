@@ -1,8 +1,8 @@
-#judgement-day
+# judgement-day
 ***
 ## Feel Free to Rate FACN2 Mentors
 ***
-###How to use our Website:
+### How to use our Website:
 To check out the app, Please clone this Repository.
 ```javascript
 git clone
@@ -16,7 +16,7 @@ Run start
 npm run devStart
 ```
 ---
-##Our Product:
+## Our Product:
 We want to build a web application so the students of FACN2 can-
 ### Users Stories:
 * Rate Mentors on Categories: eg. Hair
@@ -31,18 +31,18 @@ We want to build a web application so the students of FACN2 can-
 * adding a timer for every question.
 ---
 ## Schema:
-#####*Mentors Table*
+##### *Mentors Table*
 |id|name|imageUrl
 | -|-|-
 |1|Mario|Mario's picture|
 |2|Shireen| Shireen's picture|
 
-#####*Questions Table*
+##### *Questions Table*
 |id |category|question|
 |-|-|-|
 |1|hair|who's hair is better?|
 |2|singing|who's singing is better?|
-#####*Category Table*
+##### *Category Table*
 |id|mentor_id|rating|Shireen|Mario|
 |-|-|-|-|-|
 |1|2|14|4|0|
