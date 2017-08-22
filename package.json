@@ -23,7 +23,9 @@
     "istanbul": "^0.4.5",
     "serve-favicon": "^2.4.3",
     "tap-spec": "^4.1.1",
-    "tape": "^4.8.0"
+    "tape": "^4.8.0",
+    "env2": "^2.2.0",
+    "pg": "^7.1.2"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
