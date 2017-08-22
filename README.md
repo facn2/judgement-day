@@ -5,7 +5,8 @@
 ### How to use our Website:
 To check out the app, Please clone this Repository.
 ```javascript
-git clone
+git clone  https://github.com/facn2/judgement-day.git
+
 ```
 Install all the Node dependencies
 ```javascript
