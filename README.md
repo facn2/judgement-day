@@ -17,7 +17,7 @@ Run start
 ```
 ---
 ##Our Product:
-We want to build a web application so the students of FACN2 can rate the mentors on categories and
+We want to build a web application so the students of FACN2 can rate the mentors on categories.
 ### Users Stories:
 * Rate Mentors on Categories: eg. Hair
 * See percentage of how much the mentor got rating for one Category.
