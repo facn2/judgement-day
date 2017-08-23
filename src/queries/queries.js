@@ -42,13 +42,11 @@ const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, ment
             if (error) {
               return console.log(error);
             } else {
-              //DO SOMETHING WITH RESULT
-              updateRespectiveScore(category, mentorName1, mentorScore2, mentorId2, (error, result) => {
+              updateRespectiveScore(category, mentorName1, mentorScore2, mentorId2, result, (error, response) => {
                 if (error) {
                   return console.log(error);
                 } else {
-                  //DO SOMETHING WITH RESULT
-
+                  return {result1: result, result2: response}
                 }
               })
             }
