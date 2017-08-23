@@ -1,4 +1,1 @@
-module.exports = (req, res) => { 
-	const randomInt = Math.floor((Math.random() * 12) + 1);
-	
-}
+module.exports = () => Math.floor((Math.random() * 12) + 1);
