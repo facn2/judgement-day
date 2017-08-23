@@ -6,6 +6,7 @@ const buildScript = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
 
 dbConnection.query(buildScript, (err, res) => {
   if (err) {
+    console.log(err);
     throw err;
   }
   console.log('table successfully created with result: ', res);
