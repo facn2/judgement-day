@@ -1,11 +1,14 @@
-const db = require('.././database/db_connection');
+const db = require('/../database/db_connection')
+
+const getTwoMentors = (firstId, secondId) => {
+  db.query(`SELECT * FROM mentors WHERE id = $1 OR id = $2`, [firstId, secondId]);
+};
 
 const getQuestion = (category) => {
   return db.query(`SELECT category, question FROM questions WHERE category = $1`, [category]);
 };
 
-
-const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, mentorScore2, mentorName1, mentorName2) = {
+const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, mentorScore2,) = {
 
   const updateRating = (category, mentorScore, mentorId, callback) => {
     db.query(`UPDATE $1 SET rating = rating + $2 WHERE mentor_id = $3`, [category, mentorScore, mentorId], (error, result) => {
@@ -39,12 +42,12 @@ const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, ment
             if (error) {
               console.log(error);
             } else {
-              DO SOMETHING WITH RESULT
+              //DO SOMETHING WITH RESULT
               updateRespectiveScore(category, mentorName1, mentorScore2, mentorId2, (error, result) => {
                 if (error) {
                   console.log(error);
                 } else {
-                  DO SOMETHING WITH RESULT
+                  //DO SOMETHING WITH RESULT
 
                 }
               })
@@ -57,6 +60,7 @@ const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, ment
 }
 
 module.exports = {
+  getTwoMentors,
   getQuestion,
   updateCategoryScore
 };
