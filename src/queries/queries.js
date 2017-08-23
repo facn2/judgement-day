@@ -8,7 +8,7 @@ const getQuestion = (category) => {
   return db.query(`SELECT category, question FROM questions WHERE category = $1`, [category]);
 };
 
-const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, mentorScore2,) = {
+const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, mentorScore2, mentorName1, mentorName2) = {
 
   const updateRating = (category, mentorScore, mentorId, callback) => {
     db.query(`UPDATE $1 SET rating = rating + $2 WHERE mentor_id = $3`, [category, mentorScore, mentorId], (error, result) => {
