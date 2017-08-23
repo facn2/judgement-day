@@ -7,7 +7,7 @@ const getTwoMentors = (firstId, secondId, callback) => {
   		}
   		else {
   			console.log('success')
-  			callback(null, res)
+  			callback(null, res.rows)
   		}
   });
 };
@@ -19,12 +19,12 @@ const getQuestion = (categoryId, callback) => {
   		}
   		else {
   			console.log('mucho success')
-  			callback(null, res)
+  			callback(null, res.rows[0])
   		}
   });
 };
 
-const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, mentorScore2, mentorName1, mentorName2) = {
+const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, mentorScore2, mentorName1, mentorName2) => {
 
   const updateRating = (category, mentorScore, mentorId, callback) => {
     db.query(`UPDATE $1 SET rating = rating + $2 WHERE mentor_id = $3`, [category, mentorScore, mentorId], (error, result) => {

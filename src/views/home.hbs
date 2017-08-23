@@ -6,11 +6,39 @@
 	<section class="main__container--full-width">
 		<ul class="mentors__face" id="mentors__face">
 		
-		{{queries}}
-			<li>
-				<p>hollabackgrrlll</p>
-				{{randomInt}}
-			</li>
+		<div class=question id="question">
+			<div>
+	 				{{data.question}}
+			</div>
+
+		</div>
+
+		<div class="contain__two__mentors">
+
+		<div class="mentor__container" id="first__mentor">
+			<div class="mentor__name">
+				<button id="button__mentors1">{{data.mentors1}}</button>
+			</div>
+
+			<div class="mentor__img">
+			 <img src="{{data.mentors1Img}}" alt='{{data.mentors1}}'>
+			</div>
+		</div>
+
+		<div class="mentor__container" id="second__mentor">
+			<div class="mentor__name">
+				<button id="button__mentors2">{{data.mentors2}}</button>
+			</div>
+
+			<div class="mentor__img">
+			 <img src="{{data.mentors2Img}}" alt='{{data.mentors2}}'>
+			</div>
+		</div>
+
+		</div>
+
+		<button id="button__next">Judge some other sh*t</button>
+
 		</ul>
 	</section>
 
