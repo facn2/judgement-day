@@ -6,7 +6,7 @@ const getTwoMentors = (firstId, secondId, callback) => {
   			callback(err)
   		}
   		else {
-  			callback(res)
+  			callback(null, res)
   		}
   });
 };
@@ -17,7 +17,7 @@ const getQuestion = (category, callback) => {
   			callback(err)
   		}
   		else {
-  			callback(res)
+  			callback(null, res)
   		}
   });
 };
