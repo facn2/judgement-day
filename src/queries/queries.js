@@ -6,17 +6,19 @@ const getTwoMentors = (firstId, secondId, callback) => {
   			callback(err)
   		}
   		else {
+  			console.log('success')
   			callback(null, res)
   		}
   });
 };
 
-const getQuestion = (category, callback) => {
-  return db.query(`SELECT category, question FROM questions WHERE category = $1`, [category], (err, res) => {
+const getQuestion = (categoryId, callback) => {
+  return db.query(`SELECT category, question FROM questions WHERE id = $1`, [categoryId], (err, res) => {
   		if (err) {
   			callback(err)
   		}
   		else {
+  			console.log('mucho success')
   			callback(null, res)
   		}
   });
