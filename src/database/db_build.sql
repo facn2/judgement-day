@@ -40,7 +40,7 @@ INSERT INTO mentors(name, imageUrl) VALUES
 INSERT INTO questions(category, question) VALUES
 ('singing', 'who is better at singing?');
 
-INSERT INTO singing(name, rating, shireen, mario) VALUES
+INSERT INTO singing(mentor_id, rating, shireen, mario) VALUES
 (1, 10, 0, 1), (2, 0, 1, 0);
 
 COMMIT;
