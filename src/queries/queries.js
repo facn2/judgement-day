@@ -15,7 +15,7 @@ const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, ment
       if (error) {
         callback(error);
       } else {
-        return callback(result);
+        return callback(null, result);
       }
     });
   }
@@ -25,27 +25,27 @@ const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, ment
       if (error) {
         callback(error);
       } else {
-        return callback(result);
+        return callback(null, result);
       }
     });
   }
 
   updateRating(category, mentorScore1, mentorId1, (error, result) => {
     if (error) {
-      console.log(error);
+      return console.log(error);
     } else {
       updateRating(category, mentorScore2, mentorId2, (error, result) => {
         if (error) {
-          console.log(error);
+          return console.log(error);
         } else {
           updateRespectiveScore(category, mentorName2, mentorScore1, mentorId1, (error, result) => {
             if (error) {
-              console.log(error);
+              return console.log(error);
             } else {
               //DO SOMETHING WITH RESULT
               updateRespectiveScore(category, mentorName1, mentorScore2, mentorId2, (error, result) => {
                 if (error) {
-                  console.log(error);
+                  return console.log(error);
                 } else {
                   //DO SOMETHING WITH RESULT
 
