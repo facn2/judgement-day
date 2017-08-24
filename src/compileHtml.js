@@ -3,7 +3,6 @@ const fs = require('fs');
 const handlebars = require('handlebars');
 
 module.exports = (partial, data) => {
-	//this is all jack's
 	
   // read hbs partial into a variable
   const path = path.join(__dirname, 'src', 'views', 'partials', `${partial}.hbs`);

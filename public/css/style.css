@@ -1,0 +1,40 @@
+body {
+  background-color: #eee;
+}
+
+#button__mentors1, #button__mentors1:link, #button__mentors1:visited {
+  color: #333;
+  font-size: .8em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  min-width: 100px;
+  max-width: 60%;
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid transparent;
+  transition: all .2s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  /*cubic-bezier describes how fast one-dimensional values change during transitions*/
+  }
+
+#button__mentors1:hover {
+    border-color: #c75842;
+    transition: border-color .2s .2s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
+
+#button__mentors2, #button__mentors2:link, #button__mentors2:visited {
+  color: #333;
+  font-size: .8em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  min-width: 100px;
+  max-width: 60%;
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid transparent;
+  transition: all .2s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  }
+
+#button__mentors1:hover {
+    border-color: #c75842;
+    transition: border-color .2s .2s cubic-bezier(0.455, 0.030, 0.515, 0.955);
+}
