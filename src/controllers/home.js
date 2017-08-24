@@ -15,17 +15,21 @@ module.exports = (req, response) => {
 
 	renderQueries.getTwoMentors(mentorId1, mentorId2, (err, res) => {
 		if (err) {
-			res.status(500).send('Couldn\'t render mentors')
+			response.status(500).send('Couldn\'t render mentors')
+			console.log(err)
 		} 
+			data.mentorsId1 = res[0].id
 			data.mentors1 = res[0].name
 			data.mentors1Img = res[0].imageurl
+			data.mentorsId2 = res[1].id
 			data.mentors2 = res[1].name
 			data.mentors2Img = res[1].imageurl
-			
+
 				const randomQ = Math.floor((Math.random() * 6) + 1);
 				renderQueries.getQuestion(randomQ, (err, res) => {
 					if (err) {
-						res.status(500).send('Couldn\'t render question')
+						response.status(500).send('Couldn\'t render question')
+						console.log(err)
 					}
 						data.question = res.question
 						data.category = res.category
