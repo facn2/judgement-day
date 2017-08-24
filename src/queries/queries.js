@@ -27,42 +27,6 @@ const getQuestion = (categoryId, callback) => {
 
 const updateCategoryScore = (category, mentorId1, mentorId2, mentorScore1, mentorScore2, mentorName1, mentorName2, callbackResult) => {
 
-	// let categoryQuery = '';
-	// let respectiveQuery = '';
-
-	//   switch (category) {
-
- //  	case 'singing':
- //  		categoryQuery = `UPDATE singing SET rating = rating + $1 WHERE mentor_id = $2`;
- //  		// respectiveQuery = `UPDATE singing SET ${mentorName} = ${mentorName} + ${mentorScore} WHERE mentor_id = ${mentorId} RETURNING ${mentorName}`
- //  		break
-
- //  	case 'feet':  
- //  		categoryQuery = `UPDATE feet SET rating = rating + $1 WHERE mentor_id = $2`;
- //  		respectiveQuery = `UPDATE feet SET $1 = $1 + $2 WHERE mentor_id = $3 RETURNING $1`
- //  		break
-
- //  	case 'hair':
- //  		categoryQuery = `UPDATE hair SET rating = rating + $1 WHERE mentor_id = $2`;
- //  		respectiveQuery = `UPDATE hair SET $1 = $1 + $2 WHERE mentor_id = $3 RETURNING $1`
- //  		break
-
- //  	case 'TV':
- //  		categoryQuery = `UPDATE TV SET rating = rating + $1 WHERE mentor_id = $2`;
- //  		respectiveQuery = `UPDATE TV SET $1 = $1 + $2 WHERE mentor_id = $3 RETURNING $1`
- //  		break
-
-	//   case 'cooking':
- //  		categoryQuery = `UPDATE cooking SET rating = rating + $1 WHERE mentor_id = $2`;
- //  		respectiveQuery = `UPDATE cooking SET $1 = $1 + $2 WHERE mentor_id = $3 RETURNING $1`
- //  		break
-
-	// 	case 'issues':
- //  		categoryQuery = `UPDATE issues SET rating = rating + $1 WHERE mentor_id = $2`;
- //  		respectiveQuery = `UPDATE issues SET $1 = $1 + $2 WHERE mentor_id = $3 RETURNING $1`
- //  		break
- //  }
-
   const updateRating = (category, mentorScore, mentorId, callback) => {
     db.query(`UPDATE ${category} SET rating = rating + ${mentorScore} WHERE mentor_id = ${mentorId}`, (error, result) => {
       if (error) {
@@ -77,9 +41,7 @@ const updateCategoryScore = (category, mentorId1, mentorId2, mentorScore1, mento
   	console.log('callback1', callback1)
     db.query(`UPDATE ${category} SET ${mentorName} = ${mentorName} + ${mentorScore} WHERE mentor_id = ${mentorId} RETURNING ${mentorName}`, (error, result) => {
       if (error) {
-	      	console.log('2')
-	      	console.log(mentorName)
-        callback1(error);
+      	callback1(error)
       } else {
         return callback1(null, result);
       }

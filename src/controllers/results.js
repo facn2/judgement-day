@@ -10,10 +10,6 @@ module.exports = (req, response) => {
 	const category = req.query.category
 	//category is coming back as string
 
-	console.log(category)
-	console.log(winnerName)
-	console.log(loserName)
-
 	renderQueries.updateCategoryScore(category, winnerId, loserId, 1, 0, winnerName, loserName, (err, res) => {
 		if (err) {
 			res.status(500).send('No')
@@ -21,6 +17,6 @@ module.exports = (req, response) => {
 		console.log('mucho mucho success')
 		const data = res
 		console.log(data)
-		response.redirect('results', {data}) //dont know where to render this
+		response.render('results', {data}) //dont know where to render this
 	})
 }
