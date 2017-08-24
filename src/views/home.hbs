@@ -1,12 +1,12 @@
 	<section class="main__container--limited-width">
 		<h1 class="main__title">HOME</h1>
-			<p>Welcome to Judgement Day, kids.</p>
+			<p>Welcome to Judgement Day, b*tches.</p>
 	</section>
 
 	<section class="main__container--full-width">
 		<ul class="mentors__face" id="mentors__face">
 		
-		<div class=question id="question">
+		<div class=question id="question" data-key={{data.category}}>
 			<div>
 	 				{{data.question}}
 			</div>
@@ -17,7 +17,7 @@
 
 		<div class="mentor__container" id="first__mentor">
 			<div class="mentor__name">
-				<button id="button__mentors1">{{data.mentors1}}</button>
+				<button id="button__mentors1" data-key={{data.mentorsId1}}>{{data.mentors1}}</button>
 			</div>
 
 			<div class="mentor__img">
@@ -27,7 +27,7 @@
 
 		<div class="mentor__container" id="second__mentor">
 			<div class="mentor__name">
-				<button id="button__mentors2">{{data.mentors2}}</button>
+				<button id="button__mentors2" data-key={{data.mentorsId2}}>{{data.mentors2}}</button>
 			</div>
 
 			<div class="mentor__img">
@@ -37,7 +37,7 @@
 
 		</div>
 
-		<button id="button__next">Judge some other sh*t</button>
+		<a href = "/"><button id="button__next">Judge some other sh*t</button></a>
 
 		</ul>
 	</section>

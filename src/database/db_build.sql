@@ -128,14 +128,14 @@ CREATE TABLE issues(
 
 
 INSERT INTO mentors(name, imageUrl) VALUES
-('shireen', './assets/shireen.jpg'), ('mario', './assets/mario.jpg') , ('mavis', '../public/assets/mavis.jpg'), ('lubes', './assets/lubse.jpg'), ('lawson', './assets/lawson.jpg'), ('judy', './assets/judy.jpg'), ('jack', './assets/jack.jpg'), ('suha', './assets/suha.jpg'), ('reem', './assets/reem.jpg'), ('yvonne', './assets/yvonne.jpg'), ('zooey', './assets/zooey.jpg'), ('finn', './assets/finn.jpg'), ('dan',  './assets/dan.jpg');
+('shireen', './assets/shireen.jpg'), ('mario', './assets/mario.jpg') , ('mavis', '../assets/mavis.jpg'), ('lubes', './assets/lubes.jpg'), ('lawson', './assets/lawson.jpg'), ('judy', './assets/joudy.jpg'), ('jack', './assets/jack.jpg'), ('suha', './assets/suha.jpg'), ('reem', './assets/reem.jpg'), ('yvonne', './assets/yvonne.jpg'), ('zooey', './assets/zooey.jpg'), ('finn', './assets/finn.jpg'), ('dan',  './assets/dan.jpg');
 
 
 INSERT INTO questions(category, question) VALUES
 ('singing', 'who is better at singing?'),
 ('hair', 'who has better hair?'),
 ('cooking', 'who is worst at cooking?'),
-('TV', 'who is more likely to watch Tellytubbies on Friday night?'),
+('TV', 'who is more likely to watch Tellytubbies on a Friday night?'),
 ('feet', 'who has nicer feet?'),
 ('issues', 'who makes more issues on Github?');
 

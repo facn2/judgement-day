@@ -24,10 +24,11 @@ const getQuestion = (categoryId, callback) => {
   });
 };
 
-const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, mentorScore2, mentorName1, mentorName2) => {
+
+const updateCategoryScore = (category, mentorId1, mentorId2, mentorScore1, mentorScore2, mentorName1, mentorName2, callbackResult) => {
 
   const updateRating = (category, mentorScore, mentorId, callback) => {
-    db.query(`UPDATE $1 SET rating = rating + $2 WHERE mentor_id = $3`, [category, mentorScore, mentorId], (error, result) => {
+    db.query(`UPDATE ${category} SET rating = rating + ${mentorScore} WHERE mentor_id = ${mentorId}`, (error, result) => {
       if (error) {
         callback(error);
       } else {
@@ -36,33 +37,34 @@ const updateCategoryScore = (category, mentorId1, mentordId2, mentorScore1, ment
     });
   }
 
-  const updateRespectiveScore = (category, mentorName, mentorScore, mentorId, callback) => {
-    db.query(`UPDATE $1 SET $2 = $2 + $3 WHERE mentor_id = $4 RETURNING $2`, [category, mentorName, mentorScore, mentorId], (error, result) => {
+  const updateRespectiveScore = (category, mentorName, mentorScore, mentorId, callback1) => {
+  	console.log('callback1', callback1)
+    db.query(`UPDATE ${category} SET ${mentorName} = ${mentorName} + ${mentorScore} WHERE mentor_id = ${mentorId} RETURNING ${mentorName}`, (error, result) => {
       if (error) {
-        callback(error);
+      	callback1(error)
       } else {
-        return callback(null, result);
+        return callback1(null, result);
       }
     });
   }
 
-  updateRating(category, mentorScore1, mentorId1, (error, result) => {
+  updateRating(category, mentorScore1, mentorId1, (error, result1) => {
     if (error) {
       return console.log(error);
     } else {
-      updateRating(category, mentorScore2, mentorId2, (error, result) => {
+      return updateRating(category, mentorScore2, mentorId2, (error, result2) => {
         if (error) {
           return console.log(error);
         } else {
-          updateRespectiveScore(category, mentorName2, mentorScore1, mentorId1, (error, result) => {
+          return updateRespectiveScore(category, mentorName2, mentorScore1, mentorId1, (error, result3) => {
             if (error) {
               return console.log(error);
             } else {
-              updateRespectiveScore(category, mentorName1, mentorScore2, mentorId2, result, (error, response) => {
+              return updateRespectiveScore(category, mentorName1, mentorScore2, mentorId2, (error, response1) => {
                 if (error) {
                   return console.log(error);
                 } else {
-                  return {result1: result, result2: response}
+                  callbackResult(null, {result__1: result3, result__2: response1})
                 }
               })
             }

@@ -1,3 +1,3 @@
 module.exports = {
-	randomInt: require('./randomInt')
+	percentage: require('./percentage')
 };
