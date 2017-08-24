@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./src/tests/router.test.js | tap-spec",
     "start": "node src/app.js",
     "devStart": "nodemon src/app.js"
   },
@@ -29,6 +29,7 @@
   "devDependencies": {
     "istanbul": "^0.4.5",
     "nodemon": "^1.11.0",
+    "supertest": "^3.0.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.8.0"
   }
